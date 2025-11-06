@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:padding="16dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Back Button -->
+        <ImageView
+            android:id="@+id/ivBack"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentStart="true"
+            android:layout_margin="8dp"
+            android:src="@drawable/ic_go_back"
+            android:contentDescription="Go back"
+            android:clickable="true"
+            android:focusable="true" />
+
+        <!-- Main Form Content -->
+        <LinearLayout
+            android:layout_below="@id/ivBack"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="16dp">
+
+            <TextView
+                android:id="@+id/createEventTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Create Event"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:paddingBottom="16dp" />
+
+            <!-- Event Name -->
+            <EditText
+                android:id="@+id/etEventName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Event Name"
+                android:textColorHint="@color/white"
+                android:textColor="@color/white"
+                android:inputType="textCapWords"
+                android:padding="10dp"
+                android:background="@drawable/edittext_border" />
+
+            <!-- Description -->
+            <EditText
+                android:id="@+id/etDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Description"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:inputType="textMultiLine"
+                android:minLines="3"
+                android:padding="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/edittext_border" />
+
+            <!-- Date -->
+            <EditText
+                android:id="@+id/etDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Date (YYYY-MM-DD)"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:focusable="false"
+                android:clickable="true"
+                android:padding="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/edittext_border" />
+
+            <!-- Time -->
+            <EditText
+                android:id="@+id/etTime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Time (HH:MM)"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:focusable="false"
+                android:clickable="true"
+                android:padding="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/edittext_border" />
+
+            <!-- Location -->
+            <TextView
+                android:id="@+id/labellocation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" Select Location :"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:layout_marginBottom="4dp"
+                android:layout_marginTop="4dp" />
+            <Spinner
+                android:id="@+id/spinnerLocation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:drawable/btn_dropdown"
+                android:padding="8dp" />
+
+            <!-- Category -->
+            <TextView
+                android:id="@+id/labelCategory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" Select Category :"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:layout_marginBottom="4dp"
+                android:layout_marginTop="4dp" />
+
+            <Spinner
+                android:id="@+id/categorySpinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:drawable/btn_dropdown"
+                android:padding="8dp" />
+
+            <!-- Ticket Price -->
+            <EditText
+                android:id="@+id/etTicketPrice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Ticket Price"
+                android:textColorHint="@color/white"
+                android:textColor="@color/white"
+                android:inputType="numberDecimal"
+                android:padding="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/edittext_border" />
+
+            <EditText
+                android:id="@+id/etSeats"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Number of Seats"
+                android:textColorHint="@color/white"
+                android:textColor="@color/white"
+                android:inputType="number"
+                android:padding="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/edittext_border"/>
+
+            <!-- Add Button -->
+            <Button
+                android:id="@+id/btnAddEvent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Add Event"
+                android:layout_marginTop="20dp"
+                android:backgroundTint="@color/black"
+                android:textColor="@color/white"
+                android:padding="12dp" />
+        </LinearLayout>
+    </RelativeLayout>
+</ScrollView>
